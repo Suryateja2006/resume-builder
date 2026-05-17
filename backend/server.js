@@ -14,7 +14,7 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
-app.use("/",(req,res)=>{
+app.get("/",(req,res)=>{
   res.json({message:"Working fine"});
 })
 app.use('/api/templates', require('./routes/templates'));
